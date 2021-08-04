@@ -12,7 +12,7 @@ app.get("/", function(req, res){
   else{
     res.write("<p>It is the work day.</p>");
     res.write("<h1>Boo! I have to work today</h1>");
-    res.send();
+    res.send(__dirname + "/index.html");
   }
 });
 
