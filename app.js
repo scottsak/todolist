@@ -11,12 +11,14 @@ app.get("/", function(req, res){
   var currentDay = today.getDay();
   var day = "";
 
-  if(currentDay === 6 || currentDay === 0){
-    day = "Weekend";
+  var dates = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  for (var i = 0; i < 7; i++) {
+    if(currentDay === i){
+      day = dates[i];
+      break;
+    }
   }
-  else{
-    day = "Weekday"
-  }
+
   res.render("list", {kindOfDay: day})
 });
 
