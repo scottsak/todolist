@@ -12,12 +12,7 @@ app.get("/", function(req, res){
   var day = "";
 
   var dates = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  for (var i = 0; i < 7; i++) {
-    if(currentDay === i){
-      day = dates[i];
-      break;
-    }
-  }
+  day = dates[currentDay];
 
   res.render("list", {kindOfDay: day})
 });
