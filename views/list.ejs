@@ -3,9 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>To Do List</title>
+    <link rel="stylesheet" href="views/styles.css">
   </head>
   <body>
-    <h1>It's <%= kindOfDay %> today!</h1>
+    <h1><%= kindOfDay %></h1>
+
+    <ul>
+      <li>
+        Buy Food
+        </li>
+        <li>Cook Food</li>
+        <li>Eat Food</li>
+
+      <li><form class="lists" action="/" method="post">
+        <input type="text" name="litem">
+        <button type="submit" name="button">Add</button>
+      </form></li>
+    </ul>
 
   </body>
 </html>
